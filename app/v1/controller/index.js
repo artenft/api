@@ -1,19 +1,19 @@
 'use strict';
 
 const createLogin = require('./create-login');
-const createMemory = require('./create-memory');
+const createProfile = require('./create-profile');
 const createUser = require('./create-user');
-const listMemories = require('./get-memories');
-const getMemory = require('./get-memory');
+const listProfiles = require('./get-profiles');
+const getProfile = require('./get-profile');
 const updateConfirmAccount = require('./update-confirm-account');
 const updatePassword = require('./update-password');
 
 module.exports = dependencies => ({
   createLogin: createLogin(dependencies),
-  createMemory: createMemory(dependencies),
+  createProfile: createProfile(dependencies),
   createUser: createUser(dependencies),
-  listMemories: listMemories(dependencies),
-  getMemory: getMemory(dependencies),
+  listProfiles: listProfiles(dependencies),
+  getProfile: getProfile(dependencies),
   updateConfirmAccount: updateConfirmAccount(dependencies),
   updatePassword: updatePassword(dependencies),
 });

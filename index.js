@@ -2,7 +2,6 @@
 
 const http = require('http');
 
-const awsSDK = require('aws-sdk');
 const chalk = require('chalk');
 const crypto = require('crypto');
 const express = require('express');
@@ -51,7 +50,6 @@ const { routerV1 } = routers({
   }),
   transportMail: transportMail(env),
   authorize,
-  awsSDK,
   fs,
   handlebars,
   JWT,

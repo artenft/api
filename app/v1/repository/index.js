@@ -1,7 +1,7 @@
-const MemoriesRepository = require('./memories');
+const ProfileRepository = require('./profile');
 const UserRepository = require('./user');
 
 module.exports = db => ({
   userRepository: UserRepository(db),
-  memoriesRepository: MemoriesRepository(db),
+  profileRepository: ProfileRepository(db),
 });

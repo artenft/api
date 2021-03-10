@@ -21,10 +21,10 @@ const routes = dependencies => {
 
   const {
     createLogin,
-    createMemory,
+    createProfile,
     createUser,
     listMemories,
-    getMemory,
+    getProfile,
     updateConfirmAccount,
     updatePassword,
   } = controller({
@@ -39,12 +39,12 @@ const routes = dependencies => {
   logger.info('enable routes');
 
   router.post('/user', validate(post.user), createUser);
-  router.post('/memory', authorize, validate(post.memory), createMemory);
+  router.post('/profile', authorize, validate(post.profile), createProfile);
   router.post('/login', validate(post.login), createLogin);
   router.post('/reset-password', validate(post.resetPassword), updatePassword);
 
-  router.get('/memories', listMemories);
-  router.get('/memory/:memoryId', getMemory);
+  // router.get('/profile', listMemories);
+  router.get('/profiles/:profileId', getProfile);
   router.get('/confirm-account', validate(get.accountConfirmation), updateConfirmAccount);
 
   router.all('/', (req, res) => {
